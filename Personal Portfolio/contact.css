@@ -1,0 +1,353 @@
+body {
+    background-color: #d8cddf;
+    margin: 0;
+    font-family:"Yeseva One";
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1, h2, h3 {
+    padding-left: 10px;
+    margin: 0;
+}
+
+/* HEADER AND LOGO */
+header {
+    background-color: #5f4b6b;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+}
+
+.logo img {
+    margin-right: 10px;
+}
+
+#myname {
+    font-size: 18px;
+   
+}
+
+/* NAVIGATION BAR */
+nav ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li:not(:first-child)::before {
+    content: "/";
+    position: absolute;
+    left: -10px;
+    color: white;
+    font-weight: bold;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #d8cddf;
+    text-shadow: 0 0 1px #d0a6ff;
+}
+
+
+.container {
+    display: flex;
+    gap: 20%;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: center;
+    flex: 1;
+}
+
+ 
+.container form {
+   display: flex;
+    flex: wrap;
+    gap: 6px;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(23, 1, 44, 0.384);
+}
+
+
+input[type=text], [type=email], textarea {
+    padding:5px; 
+    border:2px solid #d0a6ff; 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+input[type=text]:focus, [type=email]:focus, textarea:focus {
+    border-color:#5f4b6b;
+}
+
+input[type=submit] {
+    margin-top: 5px;
+    padding:10px 5px; 
+    background:#d0a6ff; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+    color: white;
+}
+
+input[type=submit]:hover {
+    background-color:#5f4b6b;
+    text-shadow: 0 0 1px #d0a6ff;
+}
+
+
+.social-buttons {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;   
+    margin-top: 30px;
+}
+
+.social-buttons h1 {
+    font-size: 50px;
+    margin-bottom: 20px;  
+    color: #313131;
+    text-align: center;
+}
+
+.social-buttons .icon-wrapper {
+    display: flex;
+    gap: 15px; 
+    justify-content: center; 
+    align-items: center; 
+    margin: 0;
+    padding: 0;
+}
+
+
+
+  /* Helper class to divide the icons */
+  .social-margin {
+    margin-right: 15px;
+  }
+  
+  a,
+  a:hover,
+  a:focus,
+  a:active {
+    text-decoration: none;
+  }
+  
+  .social-icon {
+    margin-bottom: 15px;
+     box-sizing: border-box;
+    -moz-border-radius: 138px;
+    -webkit-border-radius: 138px;
+    border-radius: 138px;
+    border: 5px solid;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    padding-top: 11px;
+    transition: all 0.5s;
+  }
+  .social-icon:hover {
+      transform: scale( 1.5 );
+    }
+    
+    /* Linkedin Button Styling */
+    .linkedin {
+      font-size: 24px;
+      padding-top: 8px;
+      padding-left: 1px;
+      background-color: #5f4b6b;
+      color: #ffffff;
+      border-color: #5f4b6b;
+      
+    }
+    .linkedin :hover {
+      background-color: #ffffff;
+      color: #5f4b6b;
+    }
+    /* Pinterest Button Styling */
+  .pinterest {
+      font-size: 22px;
+      padding-top: 9px;
+      background-color:  #5f4b6b;
+      color: #ffffff;
+      border-color:  #5f4b6b;
+      
+    }
+    .pinterest:hover {
+      background-color: #ffffff;
+      color:  #5f4b6b;
+    }
+   
+  
+    /* Github Button Styling */
+   .github {
+      font-size: 22px;
+      padding-top: 9px;
+      background-color: #5f4b6b;
+      color: #ffffff;
+      border-color: #5f4b6b;
+      
+    }
+    .github:hover {
+      background-color: #ffffff;
+      color: #5f4b6b;
+    }
+
+
+    footer {
+    background-color: #5f4b6b;
+    color: white;
+    padding: 10px 20px; 
+    text-align: center;
+    margin-top: auto; 
+    }
+
+    /*Dark Mode*/
+
+    :root {
+        --dark-bg: #2e2733; 
+        --dark-accent: #46394d;
+        --dark-text: #c3b3d6; 
+        --dark-border: #5d4a6a; 
+        --dark-hover: #6d5a84; 
+        --dark-highlight: #e2d7f3; 
+    }
+
+    .dark-mode {
+        background-color: var(--dark-bg);
+        color: var(--dark-text);
+    }
+
+    .dark-mode .container h1{
+        color: var(--dark-highlight);
+    }
+    
+    .dark-mode header, .dark-mode footer{
+        background-color: var(--dark-accent);
+    }
+    
+    .dark-mode nav ul li a {
+        color: var(--dark-text);
+    }
+    
+    .dark-mode nav ul li a:hover {
+        color: var(--dark-highlight);
+        text-shadow: 0 0 2px var(--dark-highlight);
+    }
+    
+    .dark-mode form{
+        background-color: var(--dark-accent);
+        color: var(--dark-highlight );
+    }
+
+    .dark-mode input[type=text], .dark-mode [type=email], .dark-mode textarea {
+       background-color: var(--dark-text);
+    }
+    
+    .dark-mode input[type=submit]{
+        background-color: var(--dark-border);
+    }
+    
+    button {
+        background-color: var(--dark-accent);
+        color: var(--dark-text);
+        border: 1px solid var(--dark-border);
+        transition: transform 0.3s ease;
+        border-radius: 5px;
+    }
+    
+    button:hover {
+        background-color: var(--dark-hover);
+        transform: scale(1.2);
+    }
+    
+    
+    
+    .dark-mode #toggle-dark-mode{
+        transform: rotate(180deg); 
+    }
+    
+    /* RESPONSIVE DARK MODE BASED ON SYSTEM */
+    @media (prefers-color-scheme: dark) {
+        body {
+            background-color: var(--dark-bg);
+            color: var(--dark-text);
+        }
+
+        
+    }
+    
+    @media (max-width: 768px) {
+        body {
+            font-size: 14px;
+            
+        }
+    
+        header {
+            flex-direction: column; 
+            align-items: center;
+            
+        }
+        
+        nav ul {
+            gap: 10px; 
+        }
+    
+        nav ul li:not(:first-child)::before {
+            content: "/";
+            position: absolute;
+           left: -5px;
+            color: white;
+            font-weight: bold;
+        }
+    
+    
+        .container {
+            flex-direction: column;
+            padding: 10px;
+        }
+    
+        button {
+            background-color: var(--dark-accent);
+            color: var(--dark-text);
+            border: 1px solid var(--dark-border);
+            transition: transform 0.3s ease;
+            width: 30px;
+            border-radius: 5px;
+        }
+
+    }

@@ -1,0 +1,235 @@
+body {
+    background-color: #d8cddf;
+    margin: 0;
+    padding:0;
+    font-family:"Yeseva One";
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* HEADER AND LOGO */
+header {
+    background-color: #5f4b6b;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+}
+
+.logo img {
+    margin-right: 10px;
+}
+
+#myname {
+    font-size: 18px;
+   
+}
+
+/* NAVIGATION BAR */
+nav ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li:not(:first-child)::before {
+    content: "/";
+    position: absolute;
+    left: -10px;
+    color: white;
+    font-weight: bold;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #d8cddf;
+    text-shadow: 0 0 1px #d0a6ff;
+}
+
+.projects {
+    justify-content: center;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(23, 1, 44, 0.384);
+    margin: 10px auto;
+    padding: 10px;
+    max-width: 900px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+
+.projects h1{
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+
+.projects ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    flex-direction: column;
+    border-radius: 8px;
+    border: 1px solid #402d4b;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 0;
+}
+
+.projects ul li{
+    flex: 1;
+    text-align: center;
+}
+
+.projects ul p {
+    font-size: 14px;
+    color: #525252;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.projects ul p:not(:last-child) {
+    
+    border-bottom: 1px solid #402d4b;
+    padding: 0;
+    margin: 0;
+}
+
+footer {
+    background-color: #5f4b6b;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin-top: auto;
+}
+
+:root {
+    --dark-bg: #2e2733; 
+    --dark-accent: #46394d; 
+    --dark-text: #c3b3d6; 
+    --dark-border: #5d4a6a; 
+    --dark-hover: #6d5a84; 
+    --dark-highlight: #e2d7f3; 
+}
+
+/* DARK MODE */
+.dark-mode {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+}
+
+.dark-mode header, .dark-mode footer{
+    background-color: var(--dark-accent);
+}
+
+.dark-mode nav ul li a {
+    color: var(--dark-text);
+}
+
+.dark-mode nav ul li a:hover {
+    color: var(--dark-highlight);
+    text-shadow: 0 0 2px var(--dark-highlight);
+}
+
+.dark-mode .projects{
+    background-color: var(--dark-accent);
+    color: var(--dark-highlight );
+}
+
+.dark-mode .projects p{
+    color: #d0a6ff;
+}
+
+button {
+    background-color: var(--dark-accent);
+    color: var(--dark-text);
+    border: 1px solid var(--dark-border);
+    transition: transform 0.3s ease;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: var(--dark-hover);
+    transform: scale(1.2);
+}
+
+
+
+.dark-mode #toggle-dark-mode{
+    transform: rotate(180deg); 
+}
+
+/* RESPONSIVE DARK MODE BASED ON SYSTEM */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--dark-bg);
+        color: var(--dark-text);
+    }
+}
+
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+        
+    }
+
+    header {
+        flex-direction: column; 
+        align-items: center;
+        
+    }
+    
+    nav ul {
+        gap: 10px; 
+    }
+
+    nav ul li:not(:first-child)::before {
+        content: "/";
+        position: absolute;
+       left: -5px;
+        color: white;
+        font-weight: bold;
+    }
+
+
+    .projects {
+        padding: 10px;
+    }
+
+    button {
+        background-color: var(--dark-accent);
+        color: var(--dark-text);
+        border: 1px solid var(--dark-border);
+        transition: transform 0.3s ease;
+        width: 30px;
+        border-radius: 5px;
+    }
+}
